@@ -30,8 +30,8 @@ app.get("/api/notes:id", (req, res) => {
 });
 
 function createNewNote(body, notesArray) {
-  const animal = body;
-  notesArray.push(animal);
+  const note = body;
+  notesArray.push(note);
   //wriying the info to the db
   fs.writeFileSync(
     path.join(__dirname, "./db/db.json"),
