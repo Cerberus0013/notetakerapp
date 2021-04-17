@@ -23,7 +23,7 @@ app.get("/api/notes:id", (req, res) => {
   }
 });
 
-function createNewAnimal(body, notesArray) {
+function createNewNote(body, notesArray) {
   const animal = body;
   notesArray.push(animal);
   //wriying the info to the db
