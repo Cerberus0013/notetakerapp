@@ -1,12 +1,18 @@
 const express = require("express");
-const PORT = process.env.PORT || 3001;
+const path = require("path");
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 const { notes } =require('./db/db.json')
 const app = express();
 
+const PORT = process.env.PORT || 3000;
 //adding express middleware
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.static("public"));
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes)
 
 
 function findbyId(id, notesArray) {
