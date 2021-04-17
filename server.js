@@ -40,7 +40,7 @@ app.post("./api/notes", (req, res) => {
   req.body.id = notes.length.toString();
   console.log(req.body);
 
-  const note = createNewAnimal(req.body, notes);
+  const note = createNewNote(req.body, notes);
   res.json(req.body);
 });
 
