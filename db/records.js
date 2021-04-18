@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require('path');
-
+const {notes} = require("./db.json");
 
 function createNewNote(body, notesArray) {
     const note = body;
     
     console.log(notesArray)
-      console.log(note)
+    console.log(note)
     notesArray.push(note);
     //wriying the info to the db
     fs.writeFileSync(

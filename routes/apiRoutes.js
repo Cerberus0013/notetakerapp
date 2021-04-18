@@ -4,6 +4,7 @@ var shortid = require('shortid');
 
 const { findbyId, createNewNote, validateNote } = require("../db/records");
 
+
 router.get("/notes", (req, res) => {
   let results = notes;
   // Read the db.json file and return all saved notes as JSON.
@@ -19,7 +20,7 @@ router.post("/notes", (req, res) => {
     const note = createNewNote(req.body, notes);
     res.json(note);
   }
-  console.log(notes)
+  //console.log(notes)
 });
 
 router.get("/notes:id", (req, res) => {
