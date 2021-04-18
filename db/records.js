@@ -22,6 +22,7 @@ function findbyId(id, notesArray) {
       return result;
     }
 
+
 function validateNote(note) {
   if (!note.title) {
     return false;
